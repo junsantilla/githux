@@ -4,7 +4,7 @@ import { BiLinkExternal } from "react-icons/bi";
 
 function GithubRepo() {
 	return (
-		<div className="group border border-base-300 p-5 w-full min-w-2/6 hover:bg-base-200">
+		<div className="group border border-base-300 p-5 w-full min-w-2/6 bg-base-100 hover:bg-base-300">
 			<h3 className="font-bold mb-1">uiResources.io</h3>
 			<p>A huge collection of UI resources</p>
 			<div className="flex items-center justify-center">

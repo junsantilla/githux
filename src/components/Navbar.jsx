@@ -6,7 +6,10 @@ function Navbar() {
 			<div className="navbar max-w-5xl">
 				<div className="navbar-start">
 					<div className="dropdown">
-						<label tabIndex={0} className="btn btn-square">
+						<label
+							tabIndex={0}
+							className="btn btn-square bg-black border-0"
+						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								className="h-5 w-5"
@@ -24,7 +27,7 @@ function Navbar() {
 						</label>
 						<ul
 							tabIndex={0}
-							className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+							className="menu menu-compact dropdown-content mt-3 p-2 shadow  bg-base-100 w-52"
 						>
 							<li>
 								<a>About</a>
@@ -41,7 +44,7 @@ function Navbar() {
 					</a>
 				</div>
 				<div className="navbar-end">
-					<a className="btn">Hire Me</a>
+					<a className="btn bg-black border-0">Hire Me</a>
 				</div>
 			</div>
 		</div>

@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.profile-image {
+    box-shadow: 5px 5px 0px 0px rgba(60,196,39,0.75);
+    -webkit-box-shadow: 5px 5px 0px 0px rgba(60,196,39,0.75);
+    -moz-box-shadow: 5px 5px 0px 0px rgba(60,196,39,0.75);
+}

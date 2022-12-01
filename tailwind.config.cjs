@@ -6,6 +6,14 @@ module.exports = {
 	},
 	plugins: [require("daisyui")],
 	daisyui: {
-		themes: ["cyberpunk"],
+		themes: [
+			{
+				mytheme: {
+					primary: "#000000",
+					"base-100": "#44d62c",
+					"--rounded-btn": "0px",
+				},
+			},
+		],
 	},
 };
