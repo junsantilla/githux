@@ -14,7 +14,7 @@ export const GithubProvider = ({ children }) => {
 	useEffect(() => {
 		const fetchUser = async () => {
 			const response = await fetch(
-				`https://api.github.com/users${location.pathname}`,
+				`https://api.github.com${location.pathname}`,
 				{
 					headers: {
 						Authorization: `token ${GITHUB_TOKEN}`,
@@ -34,7 +34,7 @@ export const GithubProvider = ({ children }) => {
 			});
 
 			const response = await fetch(
-				`https://api.github.com/users${location.pathname}/repos?${params}`,
+				`https://api.github.com${location.pathname}/repos?${params}`,
 				{
 					headers: {
 						Authorization: `token ${GITHUB_TOKEN}`,
