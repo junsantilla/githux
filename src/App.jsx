@@ -4,11 +4,9 @@ import Profile from "./pages/Profile";
 function App() {
 	return (
 		<div className="App bg-black">
-			<Rounter>
-				<Routes>
-					<Route path="/:user" element={<Profile />} />
-				</Routes>
-			</Rounter>
+			<Routes>
+				<Route path="/:login" element={<Profile />} />
+			</Routes>
 		</div>
 	);
 }

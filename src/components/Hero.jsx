@@ -1,5 +1,4 @@
 import React from "react";
-import { AiFillGithub } from "react-icons/ai";
 
 function Hero() {
 	return (
