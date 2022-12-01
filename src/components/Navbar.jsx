@@ -1,9 +1,11 @@
 import { useContext } from "react";
 import GithubContext from "../context/github/GithubContext";
+import { AiFillGithub } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 function Navbar() {
 	const { user } = useContext(GithubContext);
-	const login = user.login;
+	const { html_url, login } = user;
 
 	return (
 		<div className="bg-base-200 flex justify-center py-2">
@@ -34,10 +36,7 @@ function Navbar() {
 							className="menu menu-compact dropdown-content mt-3 p-2 shadow  bg-base-100 w-52"
 						>
 							<li>
-								<a>About</a>
-							</li>
-							<li>
-								<a>Portfolio</a>
+								<Link to="/about">About</Link>
 							</li>
 						</ul>
 					</div>
@@ -46,7 +45,13 @@ function Navbar() {
 					<a className="btn btn-ghost font-bold text-xl">{login}</a>
 				</div>
 				<div className="navbar-end">
-					<a className="btn bg-black border-0">Hire Me</a>
+					<a
+						href={html_url}
+						className="btn bg-black border-0"
+						target="_blank"
+					>
+						<AiFillGithub className="mr-2 " /> View on github
+					</a>
 				</div>
 			</div>
 		</div>

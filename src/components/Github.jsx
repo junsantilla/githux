@@ -13,18 +13,10 @@ function Github() {
 							<p>Public repositories</p>
 						</div>
 						<button className="btn bg-base-100 hover:bg-base-300 border-0 text-black">
-							<AiFillGithub className="mr-2 " /> View on Github
+							<AiFillGithub className="mr-2 " /> More on github
 						</button>
 					</div>
 					<div className="repos pt-5 grid grid-cols-2 md:grid-cols-3 gap-4">
-						<GithubRepo />
-						<GithubRepo />
-						<GithubRepo />
-						<GithubRepo />
-						<GithubRepo />
-						<GithubRepo />
-						<GithubRepo />
-						<GithubRepo />
 						<GithubRepo />
 					</div>
 				</div>

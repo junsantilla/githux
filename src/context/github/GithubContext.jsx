@@ -5,6 +5,7 @@ const GithubContext = createContext();
 
 export const GithubProvider = ({ children }) => {
 	const [user, setUser] = useState({});
+	const [repos, setRepos] = useState([]);
 
 	const GITHUB_TOKEN = import.meta.env.VITE_GITHUB_TOKEN;
 
@@ -25,12 +26,34 @@ export const GithubProvider = ({ children }) => {
 		};
 
 		fetchUser();
+
+		const fetchRepos = async () => {
+			const params = new URLSearchParams({
+				sort: "created",
+				per_page: 9,
+			});
+
+			const response = await fetch(
+				`https://api.github.com/users${location.pathname}/repos?${params}`,
+				{
+					headers: {
+						Authorization: `token ${GITHUB_TOKEN}`,
+					},
+				}
+			);
+
+			const repos = await response.json();
+			setRepos(repos);
+		};
+
+		fetchRepos();
 	}, []);
 
 	return (
 		<GithubContext.Provider
 			value={{
 				user,
+				repos,
 			}}
 		>
 			{children}
