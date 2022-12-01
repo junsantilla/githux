@@ -7,7 +7,7 @@ function App() {
 	return (
 		<div className="App bg-black">
 			<Routes>
-				<Route path="/home" element={<Home />} />
+				<Route path="/" element={<Home />} />
 				<Route path="/about" element={<About />} />
 				<Route path="/:login" element={<Profile />} />
 			</Routes>

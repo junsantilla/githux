@@ -36,7 +36,7 @@ function Navbar() {
 							className="menu menu-compact dropdown-content mt-3 p-2 shadow  bg-base-100 w-52"
 						>
 							<li>
-								<Link to="/home">Home</Link>
+								<Link to="/">Home</Link>
 							</li>
 							<li>
 								<Link to="/about">About</Link>
