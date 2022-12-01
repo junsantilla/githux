@@ -1,6 +1,10 @@
-import React from "react";
+import { useContext } from "react";
+import GithubContext from "../context/github/GithubContext";
 
 function Navbar() {
+	const { user } = useContext(GithubContext);
+	const login = user.login;
+
 	return (
 		<div className="bg-base-200 flex justify-center py-2">
 			<div className="navbar max-w-5xl">
@@ -39,9 +43,7 @@ function Navbar() {
 					</div>
 				</div>
 				<div className="navbar-center">
-					<a className="btn btn-ghost font-bold text-xl">
-						Jun Santilla
-					</a>
+					<a className="btn btn-ghost font-bold text-xl">{login}</a>
 				</div>
 				<div className="navbar-end">
 					<a className="btn bg-black border-0">Hire Me</a>
