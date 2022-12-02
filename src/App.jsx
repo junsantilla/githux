@@ -12,7 +12,7 @@ function App() {
 					<Routes>
 						<Route path="/" element={<Home />} />
 						<Route path="/about" element={<About />} />
-						<Route path="/users/:login" element={<Profile />} />
+						<Route path="/:login" element={<Profile />} />
 					</Routes>
 				</div>
 			</GithubProvider>
