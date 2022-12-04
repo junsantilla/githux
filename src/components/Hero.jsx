@@ -1,8 +1,13 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import GithubContext from "../context/github/GithubContext";
+import Stats from "../components/Stats";
 
 function Hero() {
-	const { user } = useContext(GithubContext);
+	const { user, fetchUser } = useContext(GithubContext);
+
+	useEffect(() => {
+		fetchUser();
+	}, []);
 
 	const {
 		avatar_url,
@@ -78,6 +83,7 @@ function Hero() {
 					</div>
 				</div>
 			</div>
+			<Stats />
 		</>
 	);
 }

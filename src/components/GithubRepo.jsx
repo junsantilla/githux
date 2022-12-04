@@ -1,10 +1,14 @@
 import { AiFillStar } from "react-icons/ai";
 import { BiLinkExternal } from "react-icons/bi";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import GithubContext from "../context/github/GithubContext";
 
 function GithubRepo() {
-	const { repos } = useContext(GithubContext);
+	const { repos, fetchRepos } = useContext(GithubContext);
+
+	useEffect(() => {
+		fetchRepos();
+	}, []);
 
 	return (
 		<>

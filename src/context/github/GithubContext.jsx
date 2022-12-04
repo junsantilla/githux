@@ -11,49 +11,46 @@ export const GithubProvider = ({ children }) => {
 
 	const location = useLocation();
 
-	useEffect(() => {
-		const fetchUser = async () => {
-			const response = await fetch(
-				`https://api.github.com/users${location.pathname}`,
-				{
-					headers: {
-						Authorization: `token ${GITHUB_TOKEN}`,
-					},
-				}
-			);
-			const data = await response.json();
-			setUser(data);
-		};
+	const fetchUser = async () => {
+		const response = await fetch(
+			`https://api.github.com/users${location.pathname}`,
+			{
+				headers: {
+					Authorization: `token ${GITHUB_TOKEN}`,
+				},
+			}
+		);
 
-		fetchUser();
+		const data = await response.json();
+		setUser(data);
+	};
 
-		const fetchRepos = async () => {
-			const params = new URLSearchParams({
-				sort: "created",
-				per_page: 9,
-			});
+	const fetchRepos = async () => {
+		const params = new URLSearchParams({
+			sort: "created",
+			per_page: 9,
+		});
 
-			const response = await fetch(
-				`https://api.github.com/users${location.pathname}/repos?${params}`,
-				{
-					headers: {
-						Authorization: `token ${GITHUB_TOKEN}`,
-					},
-				}
-			);
+		const response = await fetch(
+			`https://api.github.com/users${location.pathname}/repos?${params}`,
+			{
+				headers: {
+					Authorization: `token ${GITHUB_TOKEN}`,
+				},
+			}
+		);
 
-			const repos = await response.json();
-			setRepos(repos);
-		};
-
-		fetchRepos();
-	}, []);
+		const repos = await response.json();
+		setRepos(repos);
+	};
 
 	return (
 		<GithubContext.Provider
 			value={{
 				user,
 				repos,
+				fetchUser,
+				fetchRepos,
 			}}
 		>
 			{children}
