@@ -22,16 +22,18 @@ function Hero() {
 
 	return (
 		<>
-			<div className="flex justify-center">
-				<div className="w-full max-w-5xl self-center px-2 py-16">
-					<div className="flex text-base-100 ">
+			<div className="flex justify-center px-5">
+				<div className="w-full max-w-5xl self-center px-2 py-5 md:py-16">
+					<div className="flex text-base-100 flex-col md:flex-row">
 						<img
 							src={avatar_url}
 							alt="profile image"
-							className="w-48 profile-image"
+							className="w-48 profile-image m-7 ml-0 md:m-0"
 						/>
-						<div className="details ml-7">
-							<h1 className="text-5xl font-bold mb-2">{login}</h1>
+						<div className="details md:ml-7">
+							<h1 className="text-3xl md:text-5xl font-bold mb-2 ">
+								{login}
+							</h1>
 							{bio && (
 								<div className="block">
 									<span>$ </span>

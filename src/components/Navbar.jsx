@@ -8,7 +8,7 @@ function Navbar() {
 	const { html_url, login } = user;
 
 	return (
-		<div className="bg-base-200 flex justify-center py-2">
+		<div className="bg-base-200 flex justify-center py-2 px-5">
 			<div className="navbar max-w-5xl">
 				<div className="navbar-start">
 					<div className="dropdown">
@@ -47,13 +47,16 @@ function Navbar() {
 				<div className="navbar-center">
 					<a className="btn btn-ghost font-bold text-xl">{login}</a>
 				</div>
-				<div className="navbar-end">
+				<div className="navbar-end mr-2">
 					<a
 						href={html_url}
 						className="btn bg-black border-0"
 						target="_blank"
 					>
-						<AiFillGithub className="mr-2 " /> View on github
+						<AiFillGithub className="text-xl md:text-lg" />
+						<span className="hidden md:block ml-2">
+							View on github
+						</span>
 					</a>
 				</div>
 			</div>

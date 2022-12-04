@@ -14,7 +14,7 @@ function Stats() {
 
 	return (
 		<>
-			<div className="flex justify-center">
+			<div className="flex justify-center px-5 mt-2">
 				<div className="w-full max-w-5xl self-center px-2">
 					<div className="stats grid grid-cols-2 md:grid-cols-4 grid-flow-row rounded-none">
 						<div className="stat ">
