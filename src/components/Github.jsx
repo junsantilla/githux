@@ -19,8 +19,13 @@ function Github() {
 							</button>
 						</div>
 					</div>
-					<div className="repos pt-5 grid grid-cols-1 md:grid-cols-3 gap-4">
+					<div className="repos pt-5 columns-1 md:columns-3">
 						<GithubRepo />
+					</div>
+					<div className="md:hidden ">
+						<button className="btn bg-base-100 hover:bg-base-300 border-0 text-black w-full">
+							<AiFillGithub className="mr-2 " /> More on github
+						</button>
 					</div>
 				</div>
 			</div>

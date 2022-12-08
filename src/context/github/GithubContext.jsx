@@ -28,7 +28,7 @@ export const GithubProvider = ({ children }) => {
 	const fetchRepos = async () => {
 		const params = new URLSearchParams({
 			sort: "created",
-			per_page: 9,
+			per_page: 12,
 		});
 
 		const response = await fetch(
